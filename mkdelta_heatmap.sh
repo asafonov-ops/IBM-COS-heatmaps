@@ -65,7 +65,7 @@ hm.m <-melt(hm)
 # hm.m<-ddply(hm.m, .(variable), transform,rescale = rescale(value))
 hm.m<-ddply(hm.m, .(variable), transform,rescale = rescale(value,to = c(-1,1), from =c(-100,100)))
 p <- ggplot(hm.m, aes(variable, Slicestor)) + geom_tile(aes(fill = rescale),colour = 'white') +  scale_fill_gradient2(low = 'darkblue',high = 'orange' ,na.value = 'grey50')
-p + ggtitle(str_extract(commandArgs(TRUE)[1], regex('delta-[SB]CC-[:digit:]{6}-[:digit:]{6}'))) + geom_tile(aes(fill = value)) + geom_text(aes(label = round(value, 1))) + theme(plot.title = element_text(size = 40, face = 'bold')) + theme(axis.text.x = element_text(size = rel(1.4),angle = 90)) + theme(axis.text.y = element_text(size = rel(1.32))) + theme(axis.title.x = element_blank())
+p + ggtitle(str_extract(commandArgs(TRUE)[1], regex('delta-[:digit:]{6}-[:digit:]{6}'))) + geom_tile(aes(fill = value)) + geom_text(aes(label = round(value, 1))) + theme(plot.title = element_text(size = 40, face = 'bold')) + theme(axis.text.x = element_text(size = rel(1.4),angle = 90)) + theme(axis.text.y = element_text(size = rel(1.32))) + theme(axis.title.x = element_blank())
 
 pdf(NULL)
 ggsave(file=commandArgs(TRUE)[2],width=40, height=20)" | Rscript - $OF $POF
