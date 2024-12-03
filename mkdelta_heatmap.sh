@@ -17,7 +17,7 @@ cat $2 | awk -F ',' '{ print $1}' | grep -v ^Slicestor$ > $t2
 cat $1 | sed -e 's/-//g' > $t3
 cat $2 | sed -e 's/-//g' > $t4
 
-OF=delta-$(echo $1 | perl -lne 'print $& if /[B,S]CC/')-$(echo $1 | perl -lne 'print $& if /-\d\d\d\d\d\d-/' | sed -e 's/-//g')-$(echo $2 | perl -lne 'print $& if /-\d\d\d\d\d\d-/' | sed -e 's/-//g').csv
+OF=delta-$(echo $1 | perl -lne 'print $& if /-\d\d\d\d\d\d-/' | sed -e 's/-//g')-$(echo $2 | perl -lne 'print $& if /-\d\d\d\d\d\d-/' | sed -e 's/-//g').csv
 echo Generating delta CVS file: $OF
 POF=$(echo $OF | sed -e 's/csv/pdf/g')
 python3 -c "import numpy as np

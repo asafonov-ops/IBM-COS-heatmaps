@@ -23,7 +23,8 @@ import re
 import sys
 import fileinput
 
-p=re.compile(r'^icos(([a-z0-9][a-z0-9\-]*[a-z0-9])|[a-z0-9]+\.)*([a-z]+|xn\-\-[a-z0-9]+)\.?')
+# p=re.compile(r'^icos(([a-z0-9][a-z0-9\-]*[a-z0-9])|[a-z0-9]+\.)*([a-z]+|xn\-\-[a-z0-9]+)\.?')
+p=re.compile(r'^([a-z0-9]+\.)+([a-z]+|xn\-\-[a-z0-9]+)\.?')
 u=re.compile('^[a-f0-9]{8}-?[a-f0-9]{4}-?4[a-f0-9]{3}-?[89ab][a-f0-9]{3}-?[a-f0-9]{12}', re.I)
 
 for line in fileinput.input():
@@ -38,7 +39,9 @@ import re
 import sys
 import fileinput
 
-p=re.compile(r'^icos(([a-z0-9][a-z0-9\-]*[a-z0-9])|[a-z0-9]+\.)*([a-z]+|xn\-\-[a-z0-9]+)\.?')
+# p=re.compile(r'^icos(([a-z0-9][a-z0-9\-]*[a-z0-9])|[a-z0-9]+\.)*([a-z]+|xn\-\-[a-z0-9]+)\.?')
+# p=re.compile(r'^(([a-z][a-z0-9\-]*[a-z0-9])|[a-z0-9]+\.)*([a-z]+|xn\-\-[a-z0-9]+)\.?')
+p=re.compile(r'^([a-z0-9]+\.)+([a-z]+|xn\-\-[a-z0-9]+)\.?')
 u=re.compile('^[a-f0-9]{8}-?[a-f0-9]{4}-?4[a-f0-9]{3}-?[89ab][a-f0-9]{3}-?[a-f0-9]{12}', re.I)
 
 for line in fileinput.input():
@@ -54,7 +57,9 @@ import re
 import sys
 import fileinput
 
-p=re.compile(r'^icos(([a-z0-9][a-z0-9\-]*[a-z0-9])|[a-z0-9]+\.)*([a-z]+|xn\-\-[a-z0-9]+)\.?')
+# p=re.compile(r'^icos(([a-z0-9][a-z0-9\-]*[a-z0-9])|[a-z0-9]+\.)*([a-z]+|xn\-\-[a-z0-9]+)\.?')
+# p=re.compile(r'^(([a-z][a-z0-9\-]*[a-z0-9])|[a-z0-9]+\.)*([a-z]+|xn\-\-[a-z0-9]+)\.?')
+p=re.compile(r'^([a-z0-9]+\.)+([a-z]+|xn\-\-[a-z0-9]+)\.?')
 u=re.compile('^[a-f0-9]{8}-?[a-f0-9]{4}-?4[a-f0-9]{3}-?[89ab][a-f0-9]{3}-?[a-f0-9]{12}', re.I)
 
 for line in fileinput.input():
