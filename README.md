@@ -27,6 +27,10 @@ Example:
 
 Output files: TS999999999-zdi-zh-021224-1133.csv and TS999999999-zdi-zh-021224-1133.pdf
 
+**Usage**
+
+zdi2heatmap_unsorted.sh is a version of zdi2heatmap.sh utility that preserves the original drive order in "zdi -zh" output.
+
 **Usage:**
 
 mkdelta_heatmap.sh accepts two input "cvs" files. both "csv" files must be produced by zdi2heatmap.sh utility (see above).
